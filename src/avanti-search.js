@@ -1,5 +1,5 @@
 /*!
- * Avanti Search - v2.0.7 - 2017-12-08
+ * Avanti Search - v2.0.8 - 2017-12-13
  * https://github.com/avanti/avantisearch
  * Licensed MIT
  */
@@ -208,6 +208,11 @@
       if (self._checkDefaultParams()) {
         self._setDefaultParams();
         self._startFirst(1, true);
+
+        if (self.options.pagination) {
+          self._startPagination();
+        }
+
         return false;
       }
 
