@@ -208,6 +208,11 @@
       if (self._checkDefaultParams()) {
         self._setDefaultParams();
         self._startFirst(1, true);
+
+        if (self.options.pagination) {
+          self._startPagination();
+        }
+
         return false;
       }
 
